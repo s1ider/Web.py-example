@@ -1,7 +1,16 @@
+$def with (current_page)
+
+$def li(item, url):
+	<li
+	$if current_page == item:
+		class="current_page_item"
+	><a href="$url">$item</a></li>
+
+	
 <div id="navigation">
 	<ul>
-	    <li><a href="/">Home</a></li>                
-        <li><a href="/flats">Flats</a></li>                
-        <li><a href="/about">About</a></li>
+		$:li("Home", "/")
+		$:li("Flats", "/flats")
+		$:li("About", "/about")
    </ul>
 </div>
