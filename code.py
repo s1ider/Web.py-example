@@ -1,17 +1,25 @@
 import web
-from web import form
 
-render = web.template.render('templates/')
+render = web.template.render('templates/', base='base')
 
 urls = (
-	'/(.*)', 'index',
-	'/login', 'login'
+	'/$', 'index',
+	'/about$', 'about',
+	'/flats$', 'flats',
 )
 app = web.application(urls, globals())
 
 class index:
 	def GET(self, name=None):
-		return render.index(name)
+		return render.index()
+
+class about:
+	def GET(self):
+		return render.about()
+
+class flats:
+	def GET(self):
+		return render.flats()
 	
 if __name__=="__main__":
     web.internalerror = web.debugerror

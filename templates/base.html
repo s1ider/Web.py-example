@@ -1,0 +1,35 @@
+$def with (content)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html" />	
+	<link rel="stylesheet" type="text/css" href="static/style.css" media="all" />  
+	<title>Web.py example</title>
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header"><h1>Web.py<span> example</span></h1></div>
+
+
+<div id="navigation">
+			<ul>
+                <li class="current_page_item"><a href="/">Home</a></li>                
+                <li><a href="#">Flats</a></li>                
+                <li><a href="#">Python</a></li>
+                <li><a href="/about">About</a></li>
+           </ul>
+</div>
+<div id="content-wrapper">
+<div id="content">
+$:content
+</div>
+</div>
+
+
+ <div id="footer">by <a href="mailto:s1iderorama@gmail.com">Denis Zvezdov</a>. ©2011 </div>
+</div>
+</body>
